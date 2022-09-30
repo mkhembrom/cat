@@ -1999,6 +1999,13 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
+"@styled-jsx/plugin-sass@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@styled-jsx/plugin-sass/-/plugin-sass-4.0.2.tgz#6bbe6368dba608eb09e2128e47a1a02db3585c52"
+  integrity sha512-TVEzLI4z0nswzySN7+n9UHwxSb1+EAHFVYHlaEGJNaPTg65Tkg0LllkPZz9WUCgpH2zG1Jams/4EelWNjwNjIQ==
+  dependencies:
+    strip-indent "3.0.0"
+
 "@svgr/babel-plugin-add-jsx-attribute@^6.3.1":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-6.3.1.tgz#b9a5d84902be75a05ede92e70b338d28ab63fa74"
@@ -2558,10 +2565,10 @@ framer-motion@^4.1.17:
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
 
-framer-motion@^7.3.6:
-  version "7.3.6"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.3.6.tgz#aff993b9b7064c8d13cf0afa118d24e07713570a"
-  integrity sha512-en8mLpDv6IcieZo54acHg56HSLpOSryRLZtMOd1Sj1s7hBbUTWnJsv68CWaHI2ysPKcbH/olGfAhRh4yrJn5tw==
+framer-motion@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-7.5.0.tgz#e61864f9423f8b24ee5d6539e77c5d6571ee5f31"
+  integrity sha512-uz42xPsO5VmoRrT0Q2I1UZBvQ+Px0Is2c+7mum2z/UhC9m2Q1/2DmSR82ncc5qRtO/4OerNEm473ktOEX3unRg==
   dependencies:
     "@motionone/dom" "10.13.1"
     framesync "6.1.2"
@@ -2775,6 +2782,11 @@ mime-types@^2.1.12:
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
   dependencies:
     mime-db "1.52.0"
+
+min-indent@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
+  integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 ms@2.1.2:
   version "2.1.2"
@@ -3239,6 +3251,13 @@ stacktrace-js@^2.0.2:
     stack-generator "^2.0.5"
     stacktrace-gps "^3.0.4"
 
+strip-indent@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
+  integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
+  dependencies:
+    min-indent "^1.0.0"
+
 style-value-types@4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-4.1.4.tgz#80f37cb4fb024d6394087403dfb275e8bb627e75"
@@ -3255,7 +3274,7 @@ style-value-types@5.1.2:
     hey-listen "^1.0.8"
     tslib "2.4.0"
 
-styled-jsx@5.0.7:
+styled-jsx@5.0.7, styled-jsx@^5.0.7:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-5.0.7.tgz#be44afc53771b983769ac654d355ca8d019dff48"
   integrity sha512-b3sUzamS086YLRuvnaDigdAewz1/EFYlHpYBP5mZovKEdQQOIIYq8lApylub3HHZ6xFjV051kkGU7cudJmrXEA==

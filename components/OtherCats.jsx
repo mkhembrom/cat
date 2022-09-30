@@ -54,8 +54,17 @@ export const OtherCats = ({cats}) => {
 
                 @media screen and (max-width: 992px) {
                     .cat-lists{
+                        display: grid;
+                        grid-gap: 20px;
                         grid-template-columns: repeat(2, 1fr);
+                        grid-auto-rows: minmax(10px, auto);
+                        justify-content: center;
                         
+                    }
+
+                    .cat-list-img {
+                        width: 100%;
+                        height: 150px;
                     }
                 }
 

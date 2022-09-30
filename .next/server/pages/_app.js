@@ -5,34 +5,59 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 6413:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 8510:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _app)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-;// CONCATENATED MODULE: external "@chakra-ui/react"
-const react_namespaceObject = require("@chakra-ui/react");
-;// CONCATENATED MODULE: ./pages/_app.js
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8930);
+/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6197);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_2__]);
+framer_motion__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 // pages/_app.js
 
 
+
 function MyApp({ Component , pageProps  }) {
-    return /*#__PURE__*/ jsx_runtime_.jsx(react_namespaceObject.ChakraProvider, {
-        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-            ...pageProps
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.ChakraProvider, {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.AnimatePresence, {
+            exitBeforeEnter: true,
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
+                initial: {
+                    opacity: 0,
+                    y: "100px"
+                },
+                animate: {
+                    opacity: 1,
+                    y: "0px"
+                },
+                exit: {
+                    opacity: 0
+                },
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
+                    ...pageProps
+                })
+            })
         })
     });
 }
-/* harmony default export */ const _app = (MyApp);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8930:
+/***/ ((module) => {
+
+module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
@@ -40,6 +65,13 @@ function MyApp({ Component , pageProps  }) {
 /***/ ((module) => {
 
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 6197:
+/***/ ((module) => {
+
+module.exports = import("framer-motion");;
 
 /***/ })
 
@@ -50,7 +82,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(6413));
+var __webpack_exports__ = (__webpack_exec__(8510));
 module.exports = __webpack_exports__;
 
 })();

@@ -34,6 +34,13 @@ export const Strength = ({st}) => {
                     background-color: #E0E0E0;
                    
                 }
+
+                @media screen and (max-width: 500px) {
+                    .color{
+                        width: 20px !important;
+                        height: 5px !important;
+                    }
+                }
             `}</style>
         </div>
     );

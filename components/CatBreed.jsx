@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from "framer-motion"
 
 import { Cat } from "./Cat";
 import { BsArrowRight } from 'react-icons/bs';
@@ -21,19 +22,22 @@ export const CatBreed = ({catbreed}) => {
                 </div>
                     
             </div>
-            <div className="catList">
+            <div className="catList"
+                 >
               
                { 
                 
                catbreed?.map((breed) => {
                 
                     return(
-
-                        <Link href={`/cat-info/${breed.id}`} key={breed.id}>
+                        <motion.div initial={{ opacity: 0.5, y: 40, }}
+                        whileInView={{ opacity: 1, y: 0 }} transition={{ type: 'twin', duration: 0.5 }}  key={breed.id}>
+                        <Link href={`/cat-info/${breed.id}`}>
                             <a>
                             <Cat name={breed.name} img={breed.image.url} />
                             </a>
                         </Link>
+                        </motion.div>
                     );
                 }) } 
             </div>
@@ -54,7 +58,7 @@ export const CatBreed = ({catbreed}) => {
                 .bottom-bar{
                     width: 60px;
                     height: 5px;
-                    margin-top: 3px;
+                    margin-top: 5px;
                     border-radius: 30px;
                     background-color: #291507;
                     z-index: 99;

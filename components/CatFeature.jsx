@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
+
+
+
 export const CatFeature = () => {
     return (
         <div className="row">
             <div className="left">
                 <div className="left-details">
+                    <div className="bottom-bar"></div>
                     <p className="title">Why should you have a cat?</p>
                     <p className="desc">Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</p>
                     <div className="btn">
@@ -16,15 +20,22 @@ export const CatFeature = () => {
                 </div>
                 </div>
             </div>
-            <div className="right">
+            <div className="right" >
                 <div className="right-details">
-                    <img className="imgs" src="/assets/image_2.png" />
+            
+
+                    <img classame="imgs" src="/assets/image_2.png" />
+               
+
+
                     <img className="imgs" src="/assets/image 3.png" />
+                  
                     <img className="imgs" src="/assets/image 1.png" />
-                </div>
-            </div>
-            <style jsx>{`
-                .row{
+                </div >
+            </div >
+           <style jsx>{`
+
+           .row{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -45,6 +56,14 @@ export const CatFeature = () => {
 
                 .left-details{
                     width: 350px;
+                }
+                .bottom-bar{
+                    width: 60px;
+                    height: 5px;
+                    margin-bottom: 5px;
+                    border-radius: 30px;
+                    background-color: #291507;
+                    z-index: 99;
                 }
                 .title{
                     font-size: 35px;

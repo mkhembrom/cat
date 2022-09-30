@@ -23,6 +23,13 @@ export const Cat = ({name, img}) => {
                     margin-top: 1rem;
                 }
 
+                @media screen and (max-width: 500px) {
+                    .cat{
+                        width: 100% !important;
+                        height: 120px !important;
+                    }
+                }
+
                
             `}</style>
         </div>

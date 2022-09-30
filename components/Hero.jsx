@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa';
 
 export const Hero = ({listBreeds}) => {
 
@@ -15,7 +15,7 @@ export const Hero = ({listBreeds}) => {
             setIsPopup(false);
         }
 
-        setEnterCat(() => e.target.value); 
+        setEnterCat(e.target.value); 
     }
     
     useEffect(()=>{
@@ -23,7 +23,7 @@ export const Hero = ({listBreeds}) => {
         if(result === 0) {
             setIsPopup(false);
         } 
-    }, [enterCat])
+    }, [isPopup, enterCat])
     
    
 
@@ -44,7 +44,7 @@ export const Hero = ({listBreeds}) => {
                     <div className="results">
 
                         {
-                            listBreeds.filter(i => i.name?.toLowerCase().includes(enterCat)).map(item => (
+                            listBreeds.filter(i => i.name?.toLowerCase().includes(enterCat.toLowerCase())).map(item => (
                                 <li key={item.id}><Link href={`/cat-info/${item.id}`}><a>{item.name}</a></Link></li>
 
                             ))
@@ -65,6 +65,7 @@ export const Hero = ({listBreeds}) => {
                     width: 100%;
                     background: url('/assets/HeroImagemd.png') center center no-repeat;
                     border-radius: 40px 40px 0 0;
+                    background-size: cover;
 
                 }
 
@@ -133,10 +134,7 @@ export const Hero = ({listBreeds}) => {
                     padding: 1rem;
                 }
 
-                {/* .results::-webkit-scrollbar-button{
-                    display: none;
-                } */}
-
+             
                 .results::-webkit-scrollbar-thumb {
                     background-color: #BDBDBD !important;
                     border-radius: 50px;
@@ -155,11 +153,15 @@ export const Hero = ({listBreeds}) => {
                     border-radius: 10px;
                 }
 
+                li a{
+                    display: block;
+                }
+
                 .icon{
                     position: absolute;
                     right: 16px;
                     top: 50%;
-                    transform: translateY(-50%)
+                    transform: translateY(-50%);
                     
 
                 }
@@ -181,9 +183,7 @@ export const Hero = ({listBreeds}) => {
                    h1{
                     font-size: 14px;
                    }
-                }
-               
-            `}</style>
+            }`}</style>
         </div>
 
     );
